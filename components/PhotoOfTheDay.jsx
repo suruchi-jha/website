@@ -31,12 +31,23 @@ const PhotoOfTheDay = () => {
   }
 
   return (
-    <div>
-      <h1>Photo of the Day</h1>
-      <img src={photoData.url} alt={photoData.title} style={{ maxWidth: "100%", maxHeight:"50%" }} />
-      <p>{photoData.title}</p>
-      <p>
-        Photo by <a href={photoData.photographerProfile}>{photoData.photographer}</a>
+    <div className="max-w-2xl mx-auto p-4 rounded-lg shadow-lg">
+      <img
+        src={photoData.url}
+        alt={photoData.title}
+        className="w-full h-auto rounded-lg mx-auto"
+      />
+      <h2 className="mt-4 text-xl font-semibold">{photoData.title}</h2>
+      <p className="text-gray-600">
+        Photo by{" "}
+        <a
+          href={photoData.photographerProfile}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 underline"
+        >
+          {photoData.photographer}
+        </a>
       </p>
     </div>
   );
