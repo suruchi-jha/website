@@ -8,7 +8,7 @@ const PhotoOfTheDay = () => {
   useEffect(() => {
     const fetchPhoto = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/photo-of-the-day");
+        const response = await fetch("https://website-suruchi-jhas-projects.vercel.app/api/photo-of-the-day");
         if (!response.ok) {
           throw new Error("Failed to fetch photo");
         }
@@ -54,4 +54,5 @@ const PhotoOfTheDay = () => {
 };
 
 export default PhotoOfTheDay;
+
 
